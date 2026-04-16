@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SchemaSnap – Free AI FAQ Schema Generator | JSON-LD in Seconds</title>
+  <meta name="description" content="Free AI-powered FAQ schema generator. Turn any keyword or URL into production-ready JSON-LD structured data in seconds. No signup required. Google-compliant schema markup instantly.">
+  <meta name="keywords" content="faq schema generator, ai schema generator, json-ld generator free, structured data generator, faq schema markup, schema generator no signup">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://schemasnap.netlify.app/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:title" content="SchemaSnap – Free AI FAQ Schema Generator">
+  <meta property="og:description" content="Generate production-ready FAQ schema and JSON-LD markup instantly using AI. Free, no signup, Google-compliant.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SchemaSnap – Free AI FAQ Schema Generator">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SchemaSnap","url":"https://schemasnap.netlify.app/","description":"Free AI-powered FAQ schema generator.","applicationCategory":"SEOApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a FAQ schema generator?","acceptedAnswer":{"@type":"Answer","text":"A FAQ schema generator creates JSON-LD structured data for FAQ content that helps Google display rich results in Search."}},{"@type":"Question","name":"Is SchemaSnap free?","acceptedAnswer":{"@type":"Answer","text":"Yes, SchemaSnap is free. You only need a free OpenAI API key. No signup required."}},{"@type":"Question","name":"Is the JSON-LD Google-compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes, all generated schema follows Google structured data guidelines for FAQPage, Product, and Article types."}}]}</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark; }
+    .hidden { display: none !important; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+    .fade-in { animation: fadeIn 0.3s ease forwards; }
+    @keyframes spin { to{transform:rotate(360deg)} }
+    .spinner { animation: spin 0.7s linear infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .pulse-dot { animation: pulse 2s infinite; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/10 via-slate-900 to-slate-950"></div>
+  <div class="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-indigo-600/30 to-transparent blur-3xl"></div>
+
+  <!-- HEADER -->
+  <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-6 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-600 shadow-lg shadow-indigo-500/30">
+        <span class="text-lg font-semibold text-white">SS</span>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-white">SchemaSnap</p>
+        <p class="text-xs text-slate-500">AI-powered structured data</p>
+      </div>
+    </div>
+    <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
+      <a href="#tool" class="transition hover:text-indigo-300">Tool</a>
+      <a href="#features" class="transition hover:text-indigo-300">Features</a>
+      <a href="#how-it-works" class="hidden transition hover:text-indigo-300 md:inline">How it works</a>
+      <a href="#use-cases" class="hidden transition hover:text-indigo-300 md:inline">Use cases</a>
+    </nav>
+    <a href="#tool" class="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:-translate-y-0.5 hover:bg-indigo-500">Try Free →</a>
+  </header>
+
+  <main class="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-20 sm:px-6 lg:px-8">
+
+    <!-- HERO -->
+    <section class="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div class="space-y-6">
+        <p class="inline-flex items-center gap-2 rounded-full bg-indigo-600/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-200">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
+          Free AI Schema Generator
+        </p>
+        <h1 class="text-4xl font-bold leading-tight text-white sm:text-5xl">
+          Free <span class="text-indigo-400">AI FAQ Schema</span><br>Generator for SEO
+        </h1>
+        <p class="max-w-xl text-lg text-slate-300">
+          SchemaSnap turns any keyword or URL into <strong class="text-white">production-ready JSON-LD structured data</strong> using AI — the fastest free schema generator with no signup required.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="#tool" class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:-translate-y-0.5 hover:bg-indigo-500">⚡ Generate Schema Free</a>
+          <p class="text-sm text-slate-400">No sign-up. Copy & go.</p>
+        </div>
+        <div class="flex flex-wrap gap-3 text-sm text-slate-400">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1">⚡ Instant AI output</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1">🎯 Google-compliant JSON-LD</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1">📋 1-click copy</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1">🔒 No signup needed</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-indigo-500/30 via-indigo-400/10 to-transparent blur-2xl"></div>
+        <div class="rounded-3xl border border-white/10 bg-slate-900/60 p-1 shadow-2xl shadow-indigo-500/20 backdrop-blur">
+          <div class="rounded-[22px] border border-white/5 bg-slate-900 p-6">
+            <div class="mb-4 flex items-center gap-2 text-xs text-slate-400">
+              <span class="h-2 w-2 rounded-full bg-emerald-400 pulse-dot"></span>
+              Live AI schema preview
+            </div>
+            <div class="mb-3 rounded-xl bg-white/5 p-3 space-y-1">
+              <p class="text-xs font-semibold text-white">What is a FAQ schema generator?</p>
+              <p class="text-xs text-slate-400">A tool that creates JSON-LD structured data for FAQ content to earn rich results in Google Search.</p>
+            </div>
+            <pre class="rounded-2xl bg-slate-950/80 p-4 text-[11px] leading-relaxed text-indigo-100 shadow-inner shadow-indigo-500/10 overflow-auto"><code>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is FAQ schema?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Structured JSON-LD markup..."
+    }
+  }]
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- API KEY BOX -->
+    <div class="rounded-3xl border border-indigo-500/20 bg-indigo-600/5 p-6 backdrop-blur">
+      <div class="flex items-start gap-4">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-indigo-600/20 text-xl">🔑</div>
+        <div class="flex-1 space-y-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-sm font-bold text-white">Your OpenAI API Key</h3>
+            <span id="api-badge" class="rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 text-xs font-semibold text-amber-400">⚠ Not Set</span>
+          </div>
+          <p class="text-xs text-slate-400">
+            Get your free key at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener" class="text-indigo-400 underline hover:text-indigo-300">platform.openai.com/api-keys</a> — stored only in your browser, never sent to our servers.
+          </p>
+          <div class="flex flex-col gap-2 sm:flex-row">
+            <input type="password" id="api-key-input" placeholder="sk-proj-xxxxxxxxxxxxxxxxxxxx"
+              class="flex-1 rounded-xl border border-white/10 bg-slate-950/70 px-4 py-2.5 font-mono text-xs text-white outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 placeholder:text-slate-600">
+            <button onclick="saveApiKey()"
+              class="rounded-xl bg-indigo-600 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-indigo-500 whitespace-nowrap">
+              Save Key
+            </button>
+          </div>
+          <p class="text-xs text-slate-600">🔒 Stored locally in your browser — we never see or store your API key.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOL SECTION -->
+    <section id="tool" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-indigo-600/90 flex items-center justify-center shadow-lg shadow-indigo-500/30">🛠️</div>
+        <div>
+          <h2 class="text-2xl font-semibold text-white">Generate JSON-LD Schema Markup Instantly</h2>
+          <p class="text-sm text-slate-400">Enter any keyword or URL — AI generates production-ready FAQ schema and structured data.</p>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-indigo-500/10 backdrop-blur space-y-5">
+
+        <!-- Schema type pills -->
+        <div>
+          <p class="mb-2.5 text-xs font-bold uppercase tracking-wider text-slate-500">Schema Type</p>
+          <div class="flex flex-wrap gap-2">
+            <button class="schema-type-btn active-schema rounded-xl border border-indigo-500/50 bg-indigo-600/15 px-3 py-1.5 text-xs font-semibold text-indigo-300 transition" data-type="faq">📋 FAQ Page</button>
+            <button class="schema-type-btn rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-400 transition hover:border-indigo-500/30 hover:text-indigo-300" data-type="product">📦 Product</button>
+            <button class="schema-type-btn rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-400 transition hover:border-indigo-500/30 hover:text-indigo-300" data-type="article">📰 Article</button>
+            <button class="schema-type-btn rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-400 transition hover:border-indigo-500/30 hover:text-indigo-300" data-type="local">📍 Local Business</button>
+            <button class="schema-type-btn rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-400 transition hover:border-indigo-500/30 hover:text-indigo-300" data-type="review">⭐ Review</button>
+          </div>
+        </div>
+
+        <!-- Input -->
+        <form class="flex flex-col gap-3 sm:flex-row sm:items-center" onsubmit="event.preventDefault(); generate();">
+          <label class="sr-only" for="schema-input">Keyword or URL</label>
+          <input id="schema-input" type="text"
+            placeholder="e.g. 'faq schema generator' or paste a URL..."
+            class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 placeholder:text-slate-600"/>
+          <button id="generate-btn" type="submit"
+            class="inline-flex items-center justify-center gap-2 rounded-2xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:-translate-y-0.5 hover:bg-indigo-500 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none whitespace-nowrap">
+            <span id="btn-text">⚡ Generate</span>
+            <svg id="btn-spinner" class="spinner hidden h-4 w-4" viewBox="0 0 24 24" fill="none">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Example chips -->
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="text-slate-600">Try:</span>
+          <button onclick="setEx('faq schema generator free')" class="rounded-lg bg-white/5 px-2.5 py-1 text-slate-400 transition hover:bg-white/10 hover:text-indigo-300">faq schema generator</button>
+          <button onclick="setEx('structured data for seo')" class="rounded-lg bg-white/5 px-2.5 py-1 text-slate-400 transition hover:bg-white/10 hover:text-indigo-300">structured data SEO</button>
+          <button onclick="setEx('local business schema markup')" class="rounded-lg bg-white/5 px-2.5 py-1 text-slate-400 transition hover:bg-white/10 hover:text-indigo-300">local business schema</button>
+          <button onclick="setEx('product review json ld')" class="rounded-lg bg-white/5 px-2.5 py-1 text-slate-400 transition hover:bg-white/10 hover:text-indigo-300">product review schema</button>
+          <button onclick="setEx('how to add json ld to website')" class="rounded-lg bg-white/5 px-2.5 py-1 text-slate-400 transition hover:bg-white/10 hover:text-indigo-300">add json-ld guide</button>
+        </div>
+
+        <!-- Output -->
+        <div id="output-area" class="mt-2 space-y-4">
+
+          <!-- Empty state -->
+          <div id="empty-state" class="rounded-2xl border border-dashed border-white/10 py-12 text-center">
+            <p class="text-3xl mb-3">🤖</p>
+            <p class="text-sm font-semibold text-white mb-1">Ready to generate FAQ schema markup</p>
+            <p class="text-xs text-slate-500">Enter a keyword or URL above — AI creates your structured data instantly</p>
+          </div>
+
+          <!-- Results -->
+          <div id="results-area" class="hidden fade-in space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center gap-1 rounded-xl bg-white/5 p-1">
+                <button data-tab="faqs" class="tab-btn rounded-lg bg-white/10 px-4 py-1.5 text-xs font-semibold text-indigo-100 transition shadow-inner shadow-indigo-500/10">📋 FAQ Copy</button>
+                <button data-tab="json" class="tab-btn rounded-lg px-4 py-1.5 text-xs font-semibold text-slate-400 transition hover:bg-white/5">{ } JSON-LD</button>
+              </div>
+              <button id="copy-btn" class="inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:border-indigo-400 hover:text-indigo-100">
+                <span>📋</span> Copy All
+              </button>
+            </div>
+
+            <div id="faqs" class="tab-panel space-y-3 rounded-2xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-100 shadow-inner shadow-indigo-500/10"></div>
+
+            <div id="json" class="tab-panel hidden rounded-2xl border border-white/10 bg-slate-950/70 p-5 text-sm text-indigo-100 shadow-inner shadow-indigo-500/10">
+              <pre class="overflow-auto text-xs leading-relaxed"><code id="json-code"></code></pre>
+            </div>
+          </div>
+
+          <!-- Error -->
+          <div id="error-area" class="hidden rounded-2xl border border-red-500/20 bg-red-500/5 p-4">
+            <p class="text-sm text-red-300">⚠️ <span id="error-msg"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-indigo-600/90 flex items-center justify-center shadow-lg shadow-indigo-500/30">✨</div>
+        <div>
+          <h2 class="text-2xl font-semibold text-white">The Smartest Free Schema Markup Generator</h2>
+          <p class="text-sm text-slate-400">Built for SEO teams, developers and marketers who need production-ready structured data fast.</p>
+        </div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">🤖</p>
+          <h3 class="text-sm font-bold text-white mb-2">AI-Powered Generation</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Uses GPT AI to generate contextually accurate, SEO-optimized FAQ content — not templates or static output.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">🎯</p>
+          <h3 class="text-sm font-bold text-white mb-2">Google-Compliant JSON-LD</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">All generated JSON-LD follows Google structured data guidelines for FAQPage, Product and Article schema types.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">⚡</p>
+          <h3 class="text-sm font-bold text-white mb-2">Instant FAQ Schema Output</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Get production-ready FAQ schema markup in seconds. No waiting, no complicated forms or technical setup required.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">🔒</p>
+          <h3 class="text-sm font-bold text-white mb-2">Privacy-First Design</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Your API key stays in your browser only. We never store, log, or transmit your key to any server — ever.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">📋</p>
+          <h3 class="text-sm font-bold text-white mb-2">1-Click Copy</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Copy individual FAQs or the complete JSON-LD block instantly and paste directly into your CMS or page head.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">🎨</p>
+          <h3 class="text-sm font-bold text-white mb-2">5 Schema Types</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">FAQ, Product, Article, Local Business and Review schemas — all types you need for Google rich results.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">🌐</p>
+          <h3 class="text-sm font-bold text-white mb-2">URL or Keyword Input</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Paste any URL and AI extracts context automatically — or just type any keyword topic directly to generate schema.</p>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-lg transition hover:-translate-y-1 hover:border-indigo-400/60 hover:shadow-indigo-500/10">
+          <p class="text-2xl mb-3">🚀</p>
+          <h3 class="text-sm font-bold text-white mb-2">No Signup Required</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">No account, no subscription. Add your API key once and generate unlimited schema markup immediately — free forever.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-indigo-600/90 flex items-center justify-center shadow-lg shadow-indigo-500/30">📌</div>
+        <div>
+          <h2 class="text-2xl font-semibold text-white">How to Generate FAQ Schema Markup in 3 Steps</h2>
+          <p class="text-sm text-slate-400">From zero to production-ready JSON-LD structured data in under a minute.</p>
+        </div>
+      </div>
+      <div class="grid gap-4 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+          <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-sm font-bold text-white shadow-lg shadow-indigo-500/30">1</div>
+          <h3 class="text-sm font-bold text-white mb-2">Add Your Free API Key</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Get a free OpenAI API key from <strong class="text-slate-300">platform.openai.com/api-keys</strong> and paste it in the key field above. Saves locally in your browser.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+          <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-sm font-bold text-white shadow-lg shadow-indigo-500/30">2</div>
+          <h3 class="text-sm font-bold text-white mb-2">Enter Keyword or URL</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Type any keyword like "faq schema generator" or paste a URL. Choose your schema type — FAQ Page, Product, Article, Local Business, or Review.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+          <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-sm font-bold text-white shadow-lg shadow-indigo-500/30">3</div>
+          <h3 class="text-sm font-bold text-white mb-2">Copy JSON-LD & Ship</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">AI generates your FAQ copy and JSON-LD schema instantly. Copy the markup and drop it into your page <code class="text-indigo-400">&lt;head&gt;</code> or CMS — done!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use-cases" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-indigo-600/90 flex items-center justify-center shadow-lg shadow-indigo-500/30">🏆</div>
+        <div>
+          <h2 class="text-2xl font-semibold text-white">Who Uses SchemaSnap</h2>
+          <p class="text-sm text-slate-400">From solo bloggers to enterprise SEO teams — AI structured data for everyone.</p>
+        </div>
+      </div>
+      <div class="grid gap-4 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5"><h3 class="text-sm font-bold text-indigo-300 mb-2">🏢 SEO Agencies</h3><p class="text-xs text-slate-400 leading-relaxed">Generate FAQ schema for multiple client pages instantly. Scale structured data implementation without manual JSON-LD writing.</p></div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5"><h3 class="text-sm font-bold text-indigo-300 mb-2">📝 Content Marketers</h3><p class="text-xs text-slate-400 leading-relaxed">Add FAQ schema to blog posts to earn rich results in Google Search and boost organic click-through rates.</p></div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5"><h3 class="text-sm font-bold text-indigo-300 mb-2">👩‍💻 Developers</h3><p class="text-xs text-slate-400 leading-relaxed">Skip writing boilerplate JSON-LD by hand. Generate accurate schema markup in seconds and paste into your codebase.</p></div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5"><h3 class="text-sm font-bold text-indigo-300 mb-2">🛒 E-commerce Stores</h3><p class="text-xs text-slate-400 leading-relaxed">Generate Product and Review schema for product pages to display star ratings and pricing in Google results.</p></div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5"><h3 class="text-sm font-bold text-indigo-300 mb-2">📍 Local Businesses</h3><p class="text-xs text-slate-400 leading-relaxed">Create LocalBusiness schema to improve visibility in Google Maps and local search — no technical knowledge needed.</p></div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5"><h3 class="text-sm font-bold text-indigo-300 mb-2">✍️ Bloggers & Creators</h3><p class="text-xs text-slate-400 leading-relaxed">Add Article and FAQ schema quickly. Compete for featured snippets without being a technical expert.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-600/15 via-slate-900/50 to-slate-900/50 p-12 text-center shadow-2xl shadow-indigo-500/10">
+      <h2 class="text-3xl font-bold text-white mb-4">Start Generating Free JSON-LD Schema Today</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">Free AI FAQ schema generator — bring your own OpenAI API key, no signup required, no limits.</p>
+      <a href="#tool" class="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:-translate-y-1 hover:bg-indigo-500">⚡ Generate Schema Free Now</a>
+      <p class="mt-4 text-xs text-slate-600">Free forever • No credit card • Just bring your OpenAI API key</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-4 px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-500">
+        <a href="#tool" class="transition hover:text-slate-300">Free Schema Generator</a>
+        <a href="#features" class="transition hover:text-slate-300">Features</a>
+        <a href="#how-it-works" class="transition hover:text-slate-300">How It Works</a>
+        <a href="#use-cases" class="transition hover:text-slate-300">Use Cases</a>
+        <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener" class="transition hover:text-slate-300">Get API Key</a>
+        <a href="https://schema.org" target="_blank" rel="noopener" class="transition hover:text-slate-300">Schema.org</a>
+      </div>
+      <p class="text-xs text-slate-600">© <span id="year"></span> SchemaSnap — Free AI FAQ Schema Generator. No signup required.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2 rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-xs font-semibold text-white shadow-2xl">
+    <span id="toast-msg">✅ Done!</span>
+  </div>
+
+  <script>
+    let apiKey = localStorage.getItem('ss_openai_key') || '';
+    let faqs = [], jsonLd = null, activeTab = 'faqs', schemaType = 'faq';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if (apiKey) { document.getElementById('api-key-input').value = apiKey; setBadge(true); }
+
+    // Schema type
+    document.querySelectorAll('.schema-type-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.schema-type-btn').forEach(b => {
+          b.className = 'schema-type-btn rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-400 transition hover:border-indigo-500/30 hover:text-indigo-300';
+        });
+        btn.className = 'schema-type-btn active-schema rounded-xl border border-indigo-500/50 bg-indigo-600/15 px-3 py-1.5 text-xs font-semibold text-indigo-300 transition';
+        schemaType = btn.dataset.type;
+      });
+    });
+
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+
+    document.getElementById('copy-btn').addEventListener('click', copyAll);
+    document.getElementById('schema-input').addEventListener('keydown', e => { if(e.key==='Enter') generate(); });
+
+    function saveApiKey() {
+      const k = document.getElementById('api-key-input').value.trim();
+      if (!k) { toast('Please enter your API key ❌'); return; }
+      if (!k.startsWith('sk-')) { toast('Invalid key format ❌'); return; }
+      apiKey = k; localStorage.setItem('ss_openai_key', k);
+      setBadge(true); toast('✅ API key saved!');
+    }
+
+    function setBadge(ok) {
+      const b = document.getElementById('api-badge');
+      b.textContent = ok ? '✅ Key Saved' : '⚠ Not Set';
+      b.className = ok
+        ? 'rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400'
+        : 'rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 text-xs font-semibold text-amber-400';
+    }
+
+    function setEx(t) { document.getElementById('schema-input').value = t; document.getElementById('schema-input').focus(); }
+
+    async function generate() {
+      const input = document.getElementById('schema-input').value.trim();
+      if (!input) { document.getElementById('schema-input').focus(); return; }
+      if (!apiKey) {
+        showErr('Please save your OpenAI API key first! Get a free key at platform.openai.com/api-keys');
+        return;
+      }
+      setLoading(true); hideErr();
+      document.getElementById('empty-state').classList.add('hidden');
+      document.getElementById('results-area').classList.add('hidden');
+
+      try {
+        const typeMap = { faq:'FAQPage', product:'Product', article:'Article', local:'LocalBusiness', review:'Review' };
+        const typeName = typeMap[schemaType];
+
+        const res = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: 'gpt-4o-mini',
+            max_tokens: 1500,
+            temperature: 0.7,
+            messages: [
+              {
+                role: 'system',
+                content: `You are an expert SEO structured data specialist. Generate accurate, Google-compliant ${typeName} schema markup.
+Respond ONLY with valid JSON — no markdown, no explanation, no code fences.
+Required format: {"faqs":[{"question":"...","answer":"..."}],"jsonLd":{valid JSON-LD object}}`
+              },
+              {
+                role: 'user',
+                content: `Generate 5 SEO-optimized FAQ questions and answers for: "${input}"
+Schema type: ${typeName}
+Rules:
+- Answer real user search questions naturally
+- Each answer: 1-3 sentences, factual and helpful
+- Use keywords naturally — never keyword stuff
+- JSON-LD must follow schema.org ${typeName} spec
+- Return ONLY the JSON object`
+              }
+            ]
+          })
+        });
+
+        if (!res.ok) {
+          const e = await res.json().catch(()=>({}));
+          if (res.status === 401) throw new Error('Invalid API key. Please check your key at platform.openai.com/api-keys');
+          if (res.status === 429) throw new Error('Free tier limit reached. Add billing at platform.openai.com/billing — minimum $5 needed.');
+          if (res.status === 402) throw new Error('No credits remaining. Add billing at platform.openai.com/billing');
+          throw new Error(e.error?.message || `API error ${res.status}`);
+        }
+
+        const data = await res.json();
+        const raw = data.choices?.[0]?.message?.content || '';
+        let parsed;
+        try {
+          const clean = raw.replace(/```json\n?/g,'').replace(/```\n?/g,'').trim();
+          parsed = JSON.parse(clean);
+        } catch { throw new Error('AI returned invalid JSON. Please try again.'); }
+
+        if (!parsed.faqs || !parsed.jsonLd) throw new Error('Incomplete AI response. Please try again.');
+
+        faqs = parsed.faqs; jsonLd = parsed.jsonLd;
+        renderFaqs(faqs); renderJson(jsonLd);
+        document.getElementById('results-area').classList.remove('hidden');
+        switchTab('faqs');
+        toast('✅ Schema generated!');
+
+      } catch(err) {
+        showErr(err.message || 'Generation failed. Please try again.');
+        document.getElementById('empty-state').classList.remove('hidden');
+      } finally { setLoading(false); }
+    }
+
+    function renderFaqs(list) {
+      document.getElementById('faqs').innerHTML = list.map((f,i) => `
+        <div class="flex items-start justify-between gap-3 rounded-xl bg-white/5 p-4">
+          <div>
+            <p class="font-semibold text-white">${esc(f.question)}</p>
+            <p class="mt-1 text-xs leading-relaxed text-slate-300">${esc(f.answer)}</p>
+          </div>
+          <button onclick="cpSingle(${i})" class="flex-shrink-0 text-xs text-indigo-400 underline hover:text-indigo-300 transition">Copy</button>
+        </div>`).join('');
+    }
+
+    function renderJson(j) {
+      document.getElementById('json-code').textContent = JSON.stringify(j, null, 2);
+    }
+
+    function switchTab(tab) {
+      activeTab = tab;
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        const on = b.dataset.tab === tab;
+        b.className = on
+          ? 'tab-btn rounded-lg bg-white/10 px-4 py-1.5 text-xs font-semibold text-indigo-100 transition shadow-inner shadow-indigo-500/10'
+          : 'tab-btn rounded-lg px-4 py-1.5 text-xs font-semibold text-slate-400 transition hover:bg-white/5';
+      });
+      document.getElementById('faqs').classList.toggle('hidden', tab !== 'faqs');
+      document.getElementById('json').classList.toggle('hidden', tab !== 'json');
+    }
+
+    async function copyAll() {
+      const txt = activeTab === 'faqs'
+        ? faqs.map(f => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n')
+        : JSON.stringify(jsonLd, null, 2);
+      await cp(txt);
+      const btn = document.getElementById('copy-btn');
+      btn.innerHTML = '✅ Copied!';
+      setTimeout(() => btn.innerHTML = '<span>📋</span> Copy All', 1500);
+    }
+
+    async function cpSingle(i) { await cp(`Q: ${faqs[i].question}\nA: ${faqs[i].answer}`); toast('FAQ copied!'); }
+
+    async function cp(text) {
+      try { await navigator.clipboard.writeText(text); }
+      catch { const t=document.createElement('textarea'); t.value=text; document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t); }
+    }
+
+    function setLoading(on) {
+      document.getElementById('btn-text').textContent = on ? 'Generating...' : '⚡ Generate';
+      document.getElementById('btn-spinner').classList.toggle('hidden', !on);
+      document.getElementById('generate-btn').disabled = on;
+    }
+
+    function showErr(m) { document.getElementById('error-msg').textContent=m; document.getElementById('error-area').classList.remove('hidden'); }
+    function hideErr() { document.getElementById('error-area').classList.add('hidden'); }
+
+    function toast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.classList.remove('hidden'); t.classList.add('flex');
+      clearTimeout(t._t);
+      t._t = setTimeout(() => { t.classList.add('hidden'); t.classList.remove('flex'); }, 2500);
+    }
+
+    function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  </script>
+</body>
+</html>

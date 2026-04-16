@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://schemasnap.netlify.app/sitemap.xml
